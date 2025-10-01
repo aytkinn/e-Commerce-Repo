@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+.icon {
+  @apply h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer;
+}
+
+.icon-container {
+  @apply flex items-center space-x-4 gap-3;
+}
+
+.menu-link {
+  @apply block hover:text-gray-900;
+}
+
+.menu-container {
+  @apply px-6 py-4 space-y-4 text-gray-500 text-2xl; 
+}
+
+.section-container {
+  @apply text-left self-start w-full;
+}
+
+.section-title {
+  @apply font-bold text-gray-800 mb-3 ml-4;
+}
+
+.section-list {
+  @apply flex flex-col space-y-2 text-sm text-gray-600 ml-4;
+}
+
+.overlay-content {
+  @apply absolute inset-0 flex items-center justify-center text-white text-center px-4;
+}
+
+.btn-primary {
+  @apply bg-green-300 text-gray-900 px-6 py-3 rounded-sm font-medium;
+}
+
+.social-icon {
+  @apply text-black;
+}
+
+.social-container {
+  @apply flex justify-start gap-x-2 mb-8 ml-4;
+}
