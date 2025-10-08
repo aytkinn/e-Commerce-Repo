@@ -4,8 +4,12 @@ import products3 from "../assets/img/products/products-3.jpg";
 import products4 from "../assets/img/products/products-4.jpg";
 import products5 from "../assets/img/products/products-5.jpg";
 import products6 from "../assets/img/products/products-6.jpg";
-import products7 from "../assets/img/products/products-6.jpg";
-import products8 from "../assets/img/products/products-6.jpg";
+import products7 from "../assets/img/products/products-7.jpg";
+import products8 from "../assets/img/products/products-8.jpg";
+import men from "../assets/img/men.png";
+import women from "../assets/img/women.png";
+import accessories from "../assets/img/accessories.jpg";
+import kids from "../assets/img/kids.jpg";
 
 
 export const products = [
@@ -131,14 +135,14 @@ export const homePageData = {
     images: [
       {
         id: 1,
-        src: "/src/assets/img/men.png",
+        src: men,
         alt: "Men's Collection",
         buttonText: "MEN",
         buttonPosition: "bottom-left"
       },
       {
         id: 2,
-        src: "/src/assets/img/women.png",
+        src: women,
         alt: "Women's Collection",
         buttonText: "WOMEN",
         buttonPosition: "bottom-left"
@@ -148,13 +152,13 @@ export const homePageData = {
   herodata:{
     images:[
      { id:1,
-      src:"/src/assets/img/accessories.jpg",
+      src:accessories,
       alt:"Accesories",
       buttonText:"ACCESSORIES",
       buttonPosition:"bottom-left"
     },
    { id:2,
-      src:"/src/assets/img/kids.jpg",
+      src:kids,
       alt:"kids",
       buttonText:"KIDS",
       buttonPosition:"bottom-left",
