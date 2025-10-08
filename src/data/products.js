@@ -1,3 +1,13 @@
+import products1 from "../assets/img/products/products-1.jpg";
+import products2 from "../assets/img/products/products-2.jpg";
+import products3 from "../assets/img/products/products-3.jpg";
+import products4 from "../assets/img/products/products-4.jpg";
+import products5 from "../assets/img/products/products-5.jpg";
+import products6 from "../assets/img/products/products-6.jpg";
+import products7 from "../assets/img/products/products-6.jpg";
+import products8 from "../assets/img/products/products-6.jpg";
+
+
 export const products = [
   {
     id: 1,
@@ -5,7 +15,7 @@ export const products = [
     price: 6.48,
     originalPrice: 16.48,
     discount: 33,
-    image: "src/assets/img/products/products-1.jpg",
+    image: products1,
     rating: 4.5,
     category: "Women"
   },
@@ -15,7 +25,7 @@ export const products = [
     price: 6.48,
     originalPrice: 16.48,
     discount: 25,
-    image: "src/assets/img/products/products-2.jpg",
+    image: products2,
     rating: 4.8,
     category: "Men"
   },
@@ -25,7 +35,7 @@ export const products = [
     price: 6.48,
     originalPrice: 16.48,
     discount: null,
-    image: "src/assets/img/products/products-3.jpg",
+    image: products3,
     rating: 4.2,
     category: "Women"
   },
@@ -35,7 +45,7 @@ export const products = [
     price: 6.48,
     originalPrice: 16.48,
     discount: 33,
-    image: "src/assets/img/products/products-4.jpg",
+    image: products4,
     rating: 4.6,
     category: "Women"
   },
@@ -45,7 +55,7 @@ export const products = [
     price: 6.48,
     originalPrice: 16.48,
     discount: null,
-    image: "src/assets/img/products/products-5.jpg",
+    image: products5,
     rating: 4.7,
     category: "Men"
   },
@@ -55,7 +65,7 @@ export const products = [
    price: 6.48,
     originalPrice: 16.48,
     discount: 38,
-    image: "src/assets/img/products/products-6.jpg",
+    image: products6,
     rating: 4.3,
     category: "Women"
   },
@@ -65,7 +75,7 @@ export const products = [
    price: 6.48,
     originalPrice: 16.48,
     discount: 38,
-    image: "src/assets/img/products/products-6.jpg",
+    image: products7,
     rating: 4.3,
     category: "Men"
   },
@@ -75,7 +85,7 @@ export const products = [
     price: 6.48,
     originalPrice: 16.48,
     discount: 38,
-    image: "src/assets/img/products/products-6.jpg",
+    image: products8,
     rating: 4.3,
     category: "Men"
   }
