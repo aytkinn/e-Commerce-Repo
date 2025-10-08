@@ -1,67 +1,86 @@
 export const products = [
   {
     id: 1,
-    name: "Wireless Headphones",
-    price: 99.99,
-    originalPrice: 149.99,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
     discount: 33,
-    image: "/src/assets/img/product-1.jpg",
+    image: "src/assets/img/products/products-1.jpg",
     rating: 4.5,
-    category: "Electronics"
+    category: "Women"
   },
   {
     id: 2,
-    name: "Smart Watch Series 5",
-    price: 299.99,
-    originalPrice: 399.99,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
     discount: 25,
-    image: "/src/assets/img/product-2.jpg",
+    image: "src/assets/img/products/products-2.jpg",
     rating: 4.8,
-    category: "Electronics"
+    category: "Men"
   },
   {
     id: 3,
-    name: "Bluetooth Speaker",
-    price: 79.99,
-    originalPrice: null,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
     discount: null,
-    image: "/src/assets/img/product-3.jpg",
+    image: "src/assets/img/products/products-3.jpg",
     rating: 4.2,
-    category: "Electronics"
+    category: "Women"
   },
   {
     id: 4,
-    name: "Gaming Mouse",
-    price: 59.99,
-    originalPrice: 89.99,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
     discount: 33,
-    image: "/src/assets/img/product-4.jpg",
+    image: "src/assets/img/products/products-4.jpg",
     rating: 4.6,
-    category: "Gaming"
+    category: "Women"
   },
   {
     id: 5,
-    name: "Mechanical Keyboard",
-    price: 129.99,
-    originalPrice: null,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
     discount: null,
-    image: "/src/assets/img/product-5.jpg",
+    image: "src/assets/img/products/products-5.jpg",
     rating: 4.7,
-    category: "Gaming"
+    category: "Men"
   },
   {
     id: 6,
-    name: "USB-C Hub",
-    price: 49.99,
-    originalPrice: 79.99,
+    name: "Graphic Desing",
+   price: 6.48,
+    originalPrice: 16.48,
     discount: 38,
-    image: "/src/assets/img/product-6.jpg",
+    image: "src/assets/img/products/products-6.jpg",
     rating: 4.3,
-    category: "Accessories"
+    category: "Women"
+  },
+  {
+    id: 7,
+    name: "Graphic Desing",
+   price: 6.48,
+    originalPrice: 16.48,
+    discount: 38,
+    image: "src/assets/img/products/products-6.jpg",
+    rating: 4.3,
+    category: "Men"
+  },
+  {
+    id: 8,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
+    discount: 38,
+    image: "src/assets/img/products/products-6.jpg",
+    rating: 4.3,
+    category: "Men"
   }
 ];
 
-// Kategori verileri
 export const categories = [
   {
     id: 1,
@@ -164,10 +183,12 @@ export const sliderData = [
 ];
 
 export const menuItems = [
-  { id: 1, name: "Ana Sayfa", href: "/" },
-  { id: 2, name: "Kategoriler", href: "/categories" },
-  { id: 3, name: "Ürünler", href: "/products" },
-  { id: 4, name: "İletişim", href: "/contact" }
+  { id: 1, name: "Home", href: "/" },
+  { id: 2, name: "Shop", href: "/categories" },
+  { id: 3, name: "About", href: "/about" },
+  { id: 4, name: "Blog", href: "/blog" },
+  { id: 5, name: "Contact", href: "/contact" },
+  { id: 6, name: "Pages", href: "/pages" }
 ];
 
 export const footerData = {
@@ -219,3 +240,33 @@ export const footerData = {
     { name: "Twitter", icon: "Twitter", href: "#" }
   ]
 };
+
+export const productSliderData = [
+  {
+    id: 1,
+    season: "SUMMER 2020",
+    title: "Vita Classic Product",
+    description: "We know how large objects will act, We know how are objects will act, We know",
+    price: "$16.48",
+    buttonText: "ADD TO CART",
+    image: "src/assets/img/products/product-slider1.png"
+  },
+  {
+    id: 2,
+    season: "WINTER 2020",
+    title: "Premium Collection",
+    description: "Discover our latest winter collection with premium quality materials",
+    price: "$24.99",
+    buttonText: "SHOP NOW",
+    image: "src/assets/img/products/product-slider1.png"
+  },
+  {
+    id: 3,
+    season: "SPRING 2021",
+    title: "New Arrivals",
+    description: "Fresh styles for the new season with modern designs",
+    price: "$19.99",
+    buttonText: "EXPLORE",
+    image: "src/assets/img/products/product-slider1.png"
+  }
+];
