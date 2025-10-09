@@ -32,9 +32,10 @@ const ProductSlider = () => {
         <ChevronRight className="h-8 w-8" />
       </button>
 
-      <div className="flex items-center min-h-[500px] px-16 py-12">
+      <div className="flex items-center min-h-[500px] px-16 py-12 text-left">
         <div className="flex-1 text-white pr-8">
           <div className="space-y-6">
+            
             <p className="text-left font-medium opacity-90 ml-24">{productSliderData[currentSlide].season}</p>
             <h1 className="text-left md:text-5xl font-bold leading-tight ml-24">
               {productSliderData[currentSlide].title}

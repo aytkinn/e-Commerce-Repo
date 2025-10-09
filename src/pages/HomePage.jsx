@@ -2,6 +2,8 @@ import React from 'react'
 import { homePageData, products } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import ProductSlider from '../components/ProductSlider'
+import NeuralUniverse from '../components/NeuralUniverse'
+import FeaturedPosts from '../components/FeaturedPosts'
 
 export default function HomePage() {
   const { hero,herodata } = homePageData;
@@ -24,7 +26,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-opacity-30"></div>
                 <div className="absolute bottom-4 left-4">
-                  <button className="bg-white text-gray-900 px-6 py-3 text-sm md:text-base font-semibold shadow-lg hover:bg-gray-100 transition-colors rounded">
+                  <button className="bg-white text-gray-900 h-12 w-24 px-6 py-3 text-sm md:text-base font-semibold shadow-lg hover:bg-gray-100 transition-colors ">
                     {hero.images[0].buttonText}
                   </button>
                 </div>
@@ -39,7 +41,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-opacity-30"></div>
                 <div className="absolute bottom-4 left-4">
-                  <button className="bg-white text-gray-900 px-6 py-3 text-sm md:text-base font-semibold shadow-lg hover:bg-gray-100 transition-colors rounded">
+                  <button className="bg-white text-gray-900 h-12 w-24 px-6 py-3 text-sm md:text-base font-semibold shadow-lg hover:bg-gray-100 transition-colors ">
                     {hero.images[1].buttonText}
                   </button>
                 </div>
@@ -55,7 +57,7 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-opacity-30"></div>
                   <div className="absolute bottom-2 left-2">
-                    <button className="bg-white text-gray-900 px-3 py-1 text-xs md:text-sm font-semibold hover:bg-gray-100 transition-colors rounded">
+                    <button className="bg-white text-gray-900 h-12 w-24 px-3 py-1 text-xs md:text-sm font-semibold hover:bg-gray-100 transition-colors ">
                       {image.buttonText}
                     </button>
                   </div>
@@ -78,8 +80,10 @@ export default function HomePage() {
            </div>
          </div>
 
-         {/* Product Slider */}
+     
          <ProductSlider />
+         <NeuralUniverse />
+         <FeaturedPosts />
 
     </div>
   )

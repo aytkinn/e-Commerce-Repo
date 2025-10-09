@@ -1,3 +1,4 @@
+import slide1 from "../assets/img/product-slide-1.jpg";
 import products1 from "../assets/img/products/products-1.jpg";
 import products2 from "../assets/img/products/products-2.jpg";
 import products3 from "../assets/img/products/products-3.jpg";
@@ -10,7 +11,9 @@ import men from "../assets/img/men.png";
 import women from "../assets/img/women.png";
 import accessories from "../assets/img/accessories.jpg";
 import kids from "../assets/img/kids.jpg";
-
+import featured1 from "../assets/img/featured1.jpg";
+import featured2 from "../assets/img/featured2.jpg";
+import featured3 from "../assets/img/featured3.jpg";
 
 export const products = [
   {
@@ -180,30 +183,48 @@ export const homePageData = {
 export const sliderData = [
   {
     id: 1,
-    title: "Yeni Sezon",
-    subtitle: "En Trend Ürünler",
-    buttonText: "Keşfet",
-    image: "/src/assets/img/product-slide-1.jpg",
+    h2:"Summer 2025",
+    title: "New Collection",
+    subtitle: "We know how large objects will act, but things on a small scale.",
+    buttonText: "Shop Now",
+    image: slide1,
     buttonStyle: "primary"
   },
   {
     id: 2,
     title: "Büyük İndirim",
     subtitle: "%50'ye Varan İndirimler",
-    buttonText: "Alışverişe Başla",
-    image: "/src/assets/img/product-slide-1.jpg",
+    buttonText: "Shop Now",
+    image: slide1,
     buttonStyle: "primary"
   }
 ];
 
 export const menuItems = [
   { id: 1, name: "Home", href: "/" },
-  { id: 2, name: "Shop", href: "/categories" },
+  { id: 2, name: "Shop", href: "/categories", hasDropdown: true },
   { id: 3, name: "About", href: "/about" },
   { id: 4, name: "Blog", href: "/blog" },
   { id: 5, name: "Contact", href: "/contact" },
   { id: 6, name: "Pages", href: "/pages" }
 ];
+
+export const shopDropdownData = {
+  women: [
+    "Bags",
+    "Belts", 
+    "Cosmetics",
+    "Bags",
+    "Hats"
+  ],
+  men: [
+    "Bags",
+    "Belts",
+    "Cosmetics", 
+    "Bags",
+    "Hats"
+  ]
+};
 
 export const footerData = {
   company: {
@@ -282,5 +303,35 @@ export const productSliderData = [
     price: "$19.99",
     buttonText: "EXPLORE",
     image: "src/assets/img/products/product-slider1.png"
+  }
+];
+
+export const featuredPostsData = [
+  {
+    id: 1,
+    image: featured1,
+    tags: ["Google", "Trending", "New"],
+    title: "Loudest à la Madison #1 (L'integral)",
+    description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    date: "22 April 2021",
+    comments: "10 comments"
+  },
+  {
+    id: 2,
+    image: featured2,
+    tags: ["Google", "Trending", "New"],
+    title: "Loudest à la Madison #1 (L'integral)",
+    description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    date: "22 April 2021",
+    comments: "10 comments"
+  },
+  {
+    id: 3,
+    image: featured3,
+    tags: ["Google", "Trending", "New"],
+    title: "Loudest à la Madison #1 (L'integral)",
+    description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
+    date: "22 April 2021",
+    comments: "10 comments"
   }
 ];

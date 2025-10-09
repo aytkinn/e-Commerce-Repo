@@ -1,16 +1,24 @@
-import { Heart, Mail, Menu, Phone, Search, ShoppingCart, User, X } from 'lucide-react'
+import { Heart, Mail, Menu, Phone, Search, ShoppingCart, User, X, ChevronDown } from 'lucide-react'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { menuItems, sliderData } from '../data/products';
+import { menuItems, sliderData, shopDropdownData } from '../data/products';
 
 export default function Header() {
     const [isOpen,setIsOpen]=useState(false);
+    const [showShopDropdown, setShowShopDropdown] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState(null);    
     const toggleMenu=()=>{
         setIsOpen(!isOpen);
+    }
+    const handleCategorySelect = (category, gender) => {
+        setSelectedCategory({ category, gender });
+        setShowShopDropdown(false);
+        console.log(`Seçilen kategori: ${category} (${gender})`);
     }
   return (
    <div className='w-full max-w-7xl mx-auto'>
@@ -49,26 +57,92 @@ export default function Header() {
         <div className="text-xl md:text-2xl font-bold text-gray-900">
           Bandage
         </div>
-        
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-10">
           {menuItems.map((item) => (
-            <a key={item.id} href={item.href} className="text-gray-700 hover:text-gray-900 font-medium">
-              {item.name}
-            </a>
+            <div key={item.id} className="relative">
+              {item.hasDropdown ? (
+                <div 
+                  className="text-gray-700 hover:text-gray-900 font-medium cursor-pointer relative flex items-center gap-1"
+                  onMouseEnter={() => setShowShopDropdown(true)}
+                  onMouseLeave={() => setShowShopDropdown(false)}
+                >
+                  {item.name}
+                  <ChevronDown className="h-4 w-4" />
+                  {selectedCategory && (
+                    <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                      ✓
+                    </span>
+                  )}
+                  {showShopDropdown && (
+                    <div className="absolute top-full left-0 h-60 w-80 bg-white border border-gray-200 shadow-lg z-50 ">
+                      <div className="p-6">
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className='ml-8 mt-4'>
+                            <h3 className="font-bold text-gray-800 mb-2">Kadın</h3>
+                            <ul className="space-y-4 ">
+                              {shopDropdownData.women.map((category, index) => (
+                                <li key={index}>
+                                  <button 
+                                    onClick={() => handleCategorySelect(category, 'Kadın')}
+                                    className={`text-sm w-full text-left p-1 rounded transition-colors ${
+                                      selectedCategory?.category === category && selectedCategory?.gender === 'Kadın'
+                                        ? 'bg-blue-100 text-blue-700 font-semibold'
+                                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                    }`}
+                                  >
+                                    {category}
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className='ml-4 mt-4'>
+                            <h3 className="font-bold text-gray-800 mb-2">Erkek</h3>
+                            <ul className="space-y-4">
+                              {shopDropdownData.men.map((category, index) => (
+                                <li key={index}>
+                                  <button 
+                                    onClick={() => handleCategorySelect(category, 'Erkek')}
+                                    className={`text-sm w-full text-left p-1 rounded transition-colors ${
+                                      selectedCategory?.category === category && selectedCategory?.gender === 'Erkek'
+                                        ? 'bg-blue-100 text-blue-700 font-semibold'
+                                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                                    }`}
+                                  >
+                                    {category}
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link to={item.href} className="text-gray-700 hover:text-gray-900 font-medium">
+                  {item.name}
+                </Link>
+              )}
+            </div>
           ))}
         </nav>
         
         <div className="icon-container">
           <User className="text-blue-400"/>
-          <span className='flex justify-center font-bold text-blue-400'>
+          <span className='hidden md:flex justify-between font-bold text-blue-400'>
             Login / Register
           </span>
           <Search className="text-blue-400" />
           <div className="relative">
-            <ShoppingCart className="text-blue-400" />
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            <ShoppingCart className="text-blue-400 " />
+            <span className="hidden md:flex absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
           </div>
-          <Heart className='text-blue-400' />
+          <div className='relative'>
+            <Heart className='text-blue-400' />
+          <span className="hidden md:flex absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+          </div>
           <button 
             onClick={toggleMenu}
             className="md:hidden h-6 w-6 text-gray-600"
@@ -84,9 +158,9 @@ export default function Header() {
       <div className="md:hidden w-full top-16 text-center leading-[35px] bg-white border-t z-50">
         <div className="menu-container">
           {menuItems.map((item) => (
-            <a key={item.id} href={item.href} className="menu-link">
+            <Link key={item.id} to={item.href} className="menu-link">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -107,14 +181,15 @@ export default function Header() {
             <img 
               src={slide.image} 
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-[500px] md:h-[700px] object-cover object-center"
             />
             <div className="absolute inset-0  bg-opacity-40"></div>
-            <div className="overlay-content">
-              <div className="text-center">
+            <div className="absolute inset-0 flex items-center justify-between text-white">
+              <div className="text-left md:ml-[200px]">
+                <h2> {slide.h2} </h2>
                 <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">{slide.title}</h2>
                 <p className="text-lg md:text-xl mb-6 text-white">{slide.subtitle}</p>
-                <button className="btn-primary h-18 w-40 text-lg px-6 py-5">
+                <button className="btn-primary h-12 w-40 text-lg px-6 py-5">
                   {slide.buttonText}
                 </button>
               </div>
