@@ -1,5 +1,5 @@
 import React from 'react';
-import img from "src/assets/img/neural-universe.png";
+import img from "../assets/img/neural-universe.png";
 
 const NeuralUniverse = () => {
   return (
