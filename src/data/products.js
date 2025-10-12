@@ -14,6 +14,13 @@ import kids from "../assets/img/kids.jpg";
 import featured1 from "../assets/img/featured1.jpg";
 import featured2 from "../assets/img/featured2.jpg";
 import featured3 from "../assets/img/featured3.jpg";
+import aws from "../assets/img/companylogo/aws.png";
+import hooli from "../assets/img/companylogo/hooli.png";
+import lyft from "../assets/img/companylogo/lyft.png";
+import piedpiper from "../assets/img/companylogo/PiedPiperHat.png";
+import reddit from "../assets/img/companylogo/reddit.png";
+import stripe from "../assets/img/companylogo/stripe.png";
+
 
 export const products = [
   {
@@ -69,7 +76,7 @@ export const products = [
   {
     id: 6,
     name: "Graphic Desing",
-   price: 6.48,
+    price: 6.48,
     originalPrice: 16.48,
     discount: 38,
     image: products6,
@@ -79,7 +86,7 @@ export const products = [
   {
     id: 7,
     name: "Graphic Desing",
-   price: 6.48,
+    price: 6.48,
     originalPrice: 16.48,
     discount: 38,
     image: products7,
@@ -88,6 +95,46 @@ export const products = [
   },
   {
     id: 8,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
+    discount: 38,
+    image: products8,
+    rating: 4.3,
+    category: "Men"
+  },
+  {
+    id: 9,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
+    discount: 38,
+    image: products8,
+    rating: 4.3,
+    category: "Men"
+  },
+  {
+    id: 10,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
+    discount: 38,
+    image: products8,
+    rating: 4.3,
+    category: "Men"
+  },
+  {
+    id: 11,
+    name: "Graphic Desing",
+    price: 6.48,
+    originalPrice: 16.48,
+    discount: 38,
+    image: products8,
+    rating: 4.3,
+    category: "Men"
+  },
+  {
+    id: 12,
     name: "Graphic Desing",
     price: 6.48,
     originalPrice: 16.48,
@@ -152,21 +199,23 @@ export const homePageData = {
       }
     ]
   },
-  herodata:{
-    images:[
-     { id:1,
-      src:accessories,
-      alt:"Accesories",
-      buttonText:"ACCESSORIES",
-      buttonPosition:"bottom-left"
-    },
-   { id:2,
-      src:kids,
-      alt:"kids",
-      buttonText:"KIDS",
-      buttonPosition:"bottom-left",
-    }
-  ]
+  herodata: {
+    images: [
+      {
+        id: 1,
+        src: accessories,
+        alt: "Accesories",
+        buttonText: "ACCESSORIES",
+        buttonPosition: "bottom-left"
+      },
+      {
+        id: 2,
+        src: kids,
+        alt: "kids",
+        buttonText: "KIDS",
+        buttonPosition: "bottom-left",
+      }
+    ]
   },
   featuredProducts: {
     title: "Featured Products",
@@ -183,7 +232,7 @@ export const homePageData = {
 export const sliderData = [
   {
     id: 1,
-    h2:"Summer 2025",
+    h2: "Summer 2025",
     title: "New Collection",
     subtitle: "We know how large objects will act, but things on a small scale.",
     buttonText: "Shop Now",
@@ -202,7 +251,7 @@ export const sliderData = [
 
 export const menuItems = [
   { id: 1, name: "Home", href: "/" },
-  { id: 2, name: "Shop", href: "/categories", hasDropdown: true },
+  { id: 2, name: "Shop", href: "/shop", hasDropdown: true },
   { id: 3, name: "About", href: "/about" },
   { id: 4, name: "Blog", href: "/blog" },
   { id: 5, name: "Contact", href: "/contact" },
@@ -212,7 +261,7 @@ export const menuItems = [
 export const shopDropdownData = {
   women: [
     "Bags",
-    "Belts", 
+    "Belts",
     "Cosmetics",
     "Bags",
     "Hats"
@@ -220,7 +269,7 @@ export const shopDropdownData = {
   men: [
     "Bags",
     "Belts",
-    "Cosmetics", 
+    "Cosmetics",
     "Bags",
     "Hats"
   ]
@@ -334,4 +383,30 @@ export const featuredPostsData = [
     date: "22 April 2021",
     comments: "10 comments"
   }
+];
+
+export const shopPageData = {
+  sortOptions: [
+    { value: 'featured', label: 'Popularity' },
+    { value: 'price-low', label: 'Price: Low to High' },
+    { value: 'price-high', label: 'Price: High to Low' },
+    { value: 'newest', label: 'Newest' },
+    { value: 'rating', label: 'Customer Rating' }
+  ],
+  shopHeader: [
+    { id: 1, image: slide1, name: "CLOTHS", comments: 5 }, 
+    { id: 2, image: slide1, name: "CLOTHS", comments: 5 },
+    { id: 3, image: slide1, name: "CLOTHS", comments: 5 }, 
+    { id: 4, image: slide1, name: "CLOTHS", comments: 5 }, 
+    { id: 5, image: slide1, name: "CLOTHS", comments: 5 }],
+  categories: ['all', 'women', 'men', 'kids', 'accessories']
+};
+
+export const companyLogos = [
+  { id: 1, name: "Hooli", logo: hooli, link:"https://hooli.io/" },
+  { id: 2, name: "Lyft", logo: lyft, link:"https://www.lyft.com/" },
+  { id: 3, name: "Evernote", logo: piedpiper , link:"https://hooli.io/" },
+  { id: 4, name: "Stripe", logo: stripe, link: "https://stripe.com/" },
+  { id: 5, name: "AWS", logo: aws, link:"https://aws.amazon.com/tr/free/?trk=9fb83299-9a77-4a2b-b448-9ec81bfee7bb&sc_channel=ps&ef_id=Cj0KCQjwo63HBhCKARIsAHOHV_Vjca_aWwCwlRww98kBl87jD7maV7s97peU63_dRBTEfcd_X_RemRMaAmVUEALw_wcB:G:s&s_kwcid=AL!4422!3!645208863499!e!!g!!aws!19580263879!144835121949&gad_campaignid=19580263879&gbraid=0AAAAADjHtp_3TDC85G5SYknzN-JZECu3i&gclid=Cj0KCQjwo63HBhCKARIsAHOHV_Vjca_aWwCwlRww98kBl87jD7maV7s97peU63_dRBTEfcd_X_RemRMaAmVUEALw_wcB" },
+  { id: 6, name: "Reddit", logo: reddit, link:"https://www.reddit.com/" }
 ];

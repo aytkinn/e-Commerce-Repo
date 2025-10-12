@@ -1,5 +1,10 @@
 import React from 'react'
-import { homePageData, products } from '../data/products'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { homePageData, products, sliderData } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import ProductSlider from '../components/ProductSlider'
 import NeuralUniverse from '../components/NeuralUniverse'
@@ -9,6 +14,39 @@ export default function HomePage() {
   const { hero,herodata } = homePageData;
   return (
     <div className='w-full max-w-7xl mx-auto text-center mt-8 md:mt-12'>
+      
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        className="h-80 md:h-[600px] relative z-10 mb-8"
+      >
+        {sliderData.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="relative h-full">
+              <img 
+                src={slide.image} 
+                alt={slide.title}
+                className="w-full h-[500px] md:h-[700px] object-cover object-center"
+              />
+              <div className="absolute inset-0  bg-opacity-40"></div>
+              <div className="absolute inset-0 flex items-center justify-between text-white">
+                <div className="text-left md:ml-[200px]">
+                  <h2> {slide.h2} </h2>
+                  <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">{slide.title}</h2>
+                  <p className="text-lg md:text-xl mb-6 text-white">{slide.subtitle}</p>
+                  <button className="btn-primary h-12 w-40 text-lg px-6 py-5">
+                    {slide.buttonText}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
         <div className='bg-white px-4 md:px-8 py-8 text-center'>
             <h2 className='text-2xl md:text-4xl font-bold text-gray-900 mb-2'>{hero.title}</h2>
@@ -16,9 +54,9 @@ export default function HomePage() {
         </div>
 
         <div className="px-4 md:px-8 py-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             <div className="md:col-span-1">
-              <div className="relative h-80 md:h-[500px] w-full rounded-lg overflow-hidden">
+              <div className="relative h-80 md:h-[700px] w-[650px] rounded-lg overflow-hidden">
                 <img 
                   src={hero.images[0].src} 
                   alt={hero.images[0].alt}
@@ -33,7 +71,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="md:col-span-1">
-              <div className="relative h-80 md:h-[500px] w-full rounded-lg overflow-hidden">
+              <div className="relative h-80 md:h-[700px] w-[400px] rounded-lg overflow-hidden">
                 <img 
                   src={hero.images[1].src} 
                   alt={hero.images[1].alt}
@@ -49,7 +87,7 @@ export default function HomePage() {
             </div>
             <div className="md:col-span-1 space-y-4">
               {herodata.images.map((image) => (
-                <div key={image.id} className="relative h-36 md:h-[240px] w-full rounded-lg overflow-hidden">
+                <div key={image.id} className="relative h-36 md:h-[340px] w-full rounded-lg overflow-hidden">
                   <img 
                     src={image.src} 
                     alt={image.alt} 
@@ -73,9 +111,11 @@ export default function HomePage() {
              <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2">BESTSELLER PRODUCTS</h3>
              <p className='text-sm md:text-lg text-gray-600'>Problems trying to resolve the conflict between</p>
            </div>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+           <div className="flex flex-wrap gap-4 md:gap-6">
              {products.map((product) => (
-               <ProductCard key={product.id} product={product} />
+               <div key={product.id} className="md:w-1/5 md:ml-9">
+                 <ProductCard product={product} />
+               </div>
              ))}
            </div>
          </div>

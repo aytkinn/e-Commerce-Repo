@@ -1,13 +1,19 @@
 import React from 'react';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, viewMode }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 w-full mb-4">
+    <div className={`bg-white rounded-lg shadow-sm border border-gray-100 p-4 w-full mb-4 ${
+      viewMode === 'list' ? 'max-w-md mx-auto' : ''
+    }`}>
       <div className="mb-4">
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-96 object-cover rounded-lg"
+          className={`w-full object-cover rounded-lg ${
+            viewMode === 'list' 
+              ? 'h-full' 
+              : 'h-180 md:h-96'
+          }`}
         />
       </div>
 
