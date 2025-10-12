@@ -1,10 +1,20 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const ProductCard = ({ product, viewMode }) => {
+  const history = useHistory();
+
+  const handleProductClick = () => {
+    history.push(`/product/${product.id}`);
+  };
+
   return (
-    <div className={`bg-white rounded-lg shadow-sm border border-gray-100 p-4 w-full mb-4 ${
-      viewMode === 'list' ? 'max-w-md mx-auto' : ''
-    }`}>
+    <div 
+      className={`bg-white rounded-lg shadow-sm border border-gray-100 p-4 w-full mb-4 cursor-pointer hover:shadow-md transition-shadow ${
+        viewMode === 'list' ? 'max-w-md mx-auto' : ''
+      }`}
+      onClick={handleProductClick}
+    >
       <div className="mb-4">
         <img 
           src={product.image} 

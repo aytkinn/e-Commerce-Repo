@@ -53,7 +53,7 @@ const ShopPage = () => {
               href="#"
               className="relative group overflow-hidden transition-transform hover:scale-105"
             >
-              <div className="relative h-48 w-32 md:h-64 md:w-48">
+              <div className="relative h-32 w-32 md:h-64 md:w-48">
                 <img
                   src={item.image}
                   alt={item.name}
@@ -89,7 +89,7 @@ const ShopPage = () => {
                     onClick={() => setViewMode('grid')}
                     className={`p-8 border border-gray-300 w-8 h-8 rounded-sm flex items-center justify-center ${viewMode === 'grid' ? 'bg-white' : 'bg-white hover:bg-gray-50'}`}
                   >
-                    <LayoutGrid className="h-4 w-4 text-black" />
+                    <LayoutGrid className="h-4 w-4 text-black fill-black" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
@@ -121,13 +121,15 @@ const ShopPage = () => {
           </div>
         </div>
 
-        <div className={`grid gap-4 md:gap-6 text-center leading-8 ${
+        <div className={`flex gap-2 md:gap-6 text-center leading-8 ${
           viewMode === 'grid' 
-            ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
-            : 'grid-cols-1'
+            ? 'flex-wrap justify-center' 
+            : 'flex-col'
         }`}>
-          {currentProducts.map((product) => (
-            <ProductCard key={product.id} product={product} viewMode={viewMode} />
+          {currentProducts.map((product, index) => (
+            <div key={product.id} className={`${viewMode === 'grid' && index >= 4 ? 'hidden md:block' : ''} ${viewMode === 'grid' ? 'w-1/2 md:w-1/4' : 'w-full'}`}>
+              <ProductCard product={product} viewMode={viewMode} />
+            </div>
           ))}
         </div>
 

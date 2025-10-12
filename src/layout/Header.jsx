@@ -20,7 +20,7 @@ export default function Header() {
    <div className='w-full max-w-7xl mx-auto'>
     <header className="bg-white shadow-md top-0 z-50">
        <div className={`border text-white hidden md:flex justify-between text-sm font-bold ${
-         location.pathname === '/shop' ? 'bg-[#23856D]' : 'bg-blue-950'
+         location.pathname === '/shop' || location.pathname.startsWith('/product/') ? 'bg-[#23856D]' : 'bg-blue-950'
        }`}>
         <div className='flex justify-baseline gap-10  m-4 md:ml-30'>
         <div className='flex items-center gap-2'>
@@ -122,19 +122,37 @@ export default function Header() {
         </nav>
         
         <div className="icon-container md:mr-20">
-          <User className="text-blue-400"/>
-          <span className='hidden md:flex justify-between font-bold text-blue-400'>
-            Login / Register
-          </span>
-          <Search className="text-blue-400" />
-          <div className="relative">
-            <ShoppingCart className="text-blue-400 " />
-            <span className="hidden md:flex absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+          <div className="hidden md:flex items-center gap-4">
+            <User className="text-blue-400"/>
+            <span className='font-bold text-blue-400'>
+              Login / Register
+            </span>
+            <Search className="text-blue-400" />
+            <div className="relative">
+              <ShoppingCart className="text-blue-400 " />
+              <span className="absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+            </div>
+            <div className='relative'>
+              <Heart className='text-blue-400' />
+              <span className="absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+            </div>
           </div>
-          <div className='relative'>
-            <Heart className='text-blue-400' />
-          <span className="hidden md:flex absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+          
+          <div className={`md:hidden flex items-center gap-4 ${
+            location.pathname === '/' ? 'flex' : 'hidden'
+          }`}>
+            <User className="text-blue-400"/>
+            <Search className="text-blue-400" />
+            <div className="relative">
+              <ShoppingCart className="text-blue-400 " />
+              <span className="absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+            </div>
+            <div className='relative'>
+              <Heart className='text-blue-400' />
+              <span className="absolute -right-4 -top-0.5 text-blue-400 text-xl justify-center "> 1 </span>
+            </div>
           </div>
+          
           <button 
             onClick={toggleMenu}
             className="md:hidden h-6 w-6 text-gray-600"
@@ -154,6 +172,29 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
+          
+          {location.pathname !== '/' && (
+            <div className="flex items-center justify-center gap-2 py-6">
+              <User className="h-6 w-6 text-[#23A6F0]" />
+              <span className="text-[#23A6F0] font-medium">Login / Register</span>
+            </div>
+          )}
+          
+          {location.pathname !== '/' && (
+            <div className="flex flex-col items-center gap-6 py-6">
+              <div className="flex items-center gap-2">
+                <Search className="h-6 w-6 text-[#23A6F0]" />
+              </div>
+              <div className="flex items-center gap-2">
+                <ShoppingCart className="h-6 w-6 text-[#23A6F0]" />
+                <span className="text-[#23A6F0] text-sm font-medium">1</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Heart className="h-6 w-6 text-[#23A6F0]" />
+                <span className="text-[#23A6F0] text-sm font-medium">1</span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     )}

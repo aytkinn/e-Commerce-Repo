@@ -16,9 +16,9 @@ const FeaturedPosts = () => {
       </div>
 
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="flex flex-col md:flex-row gap-6">
         {featuredPostsData.map((post) => (
-          <div key={post.id} className="bg-white border-50 border-white  overflow-hidden shadow-sm mb-8 mt-8">
+          <div key={post.id} className="bg-white border-50 border-white  overflow-hidden shadow-sm mb-8 mt-8 w-full md:w-1/3">
 
             <div className="relative">
               <img 

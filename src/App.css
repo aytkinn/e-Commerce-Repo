@@ -43,3 +43,27 @@
 .social-container {
   @apply flex justify-start gap-x-2 mb-8 ml-4;
 }
+
+.detail-heading {
+  @apply text-2xl font-bold text-[#252B42] mb-4 mt-8;
+}
+
+.detail-text {
+  @apply text-[#737373] text-sm leading-6 mb-6;
+}
+
+.detail-list-item {
+  @apply flex items-center gap-2;
+}
+
+.detail-list-icon {
+  @apply h-4 w-4 text-[#737373];
+}
+
+.detail-list-text {
+  @apply text-[#737373] text-sm;
+}
+
+.detail-list-container {
+  @apply space-y-2 mb-6;
+}

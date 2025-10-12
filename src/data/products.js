@@ -411,3 +411,18 @@ export const companyLogos = [
   { id: 5, name: "AWS", logo: aws, link:"https://aws.amazon.com/tr/free/?trk=9fb83299-9a77-4a2b-b448-9ec81bfee7bb&sc_channel=ps&ef_id=Cj0KCQjwo63HBhCKARIsAHOHV_Vjca_aWwCwlRww98kBl87jD7maV7s97peU63_dRBTEfcd_X_RemRMaAmVUEALw_wcB:G:s&s_kwcid=AL!4422!3!645208863499!e!!g!!aws!19580263879!144835121949&gad_campaignid=19580263879&gbraid=0AAAAADjHtp_3TDC85G5SYknzN-JZECu3i&gclid=Cj0KCQjwo63HBhCKARIsAHOHV_Vjca_aWwCwlRww98kBl87jD7maV7s97peU63_dRBTEfcd_X_RemRMaAmVUEALw_wcB" },
   { id: 6, name: "Reddit", logo: reddit, link:"https://www.reddit.com/" }
 ];
+
+export const productDetailData = {
+  colors: [
+    { name: 'Mavi', value: 'blue', class: 'bg-[#23A6F0]' },
+    { name: 'Yeşil', value: 'green', class: 'bg-[#23856D]' },
+    { name: 'Turuncu', value: 'orange', class: 'bg-[#E77C40]' },
+    { name: 'Siyah', value: 'black', class: 'bg-[#252B42]' }
+  ],
+  sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  productDetails: {
+    stockStatus: 'In Stok',
+    shipping: 'Ücretsiz Kargo',
+    return: '30 Gün İade Garantisi'
+  }
+};
