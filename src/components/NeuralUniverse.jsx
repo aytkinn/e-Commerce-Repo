@@ -1,4 +1,5 @@
 import React from 'react';
+import img from "src/assets/img/neural-universe.png";
 
 const NeuralUniverse = () => {
   return (
@@ -7,7 +8,7 @@ const NeuralUniverse = () => {
         <div className="w-full md:flex-1">
           <div className="relative">
             <img 
-              src="src/assets/img/neural-universe.png"
+              src= {img}
               alt="Neural Universe"
               className="w-full h-[400px] md:h-[600px] object-contain object-center"
             />

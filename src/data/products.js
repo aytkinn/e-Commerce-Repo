@@ -20,6 +20,7 @@ import lyft from "../assets/img/companylogo/lyft.png";
 import piedpiper from "../assets/img/companylogo/PiedPiperHat.png";
 import reddit from "../assets/img/companylogo/reddit.png";
 import stripe from "../assets/img/companylogo/stripe.png";
+import slider from "../assets/img/products/product-slider1.png"
 
 
 export const products = [
@@ -333,7 +334,7 @@ export const productSliderData = [
     description: "We know how large objects will act, We know how are objects will act, We know",
     price: "$16.48",
     buttonText: "ADD TO CART",
-    image: "src/assets/img/products/product-slider1.png"
+    image: slider
   },
   {
     id: 2,
@@ -342,7 +343,7 @@ export const productSliderData = [
     description: "Discover our latest winter collection with premium quality materials",
     price: "$24.99",
     buttonText: "SHOP NOW",
-    image: "src/assets/img/products/product-slider1.png"
+    image: slider
   },
   {
     id: 3,
@@ -351,7 +352,7 @@ export const productSliderData = [
     description: "Fresh styles for the new season with modern designs",
     price: "$19.99",
     buttonText: "EXPLORE",
-    image: "src/assets/img/products/product-slider1.png"
+    image: slider
   }
 ];
 
