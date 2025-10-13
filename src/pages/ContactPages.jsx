@@ -1,11 +1,11 @@
 
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Redo, Twitter, Menu, X, Search, ShoppingCart } from 'lucide-react'
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import contact from "../assets/img/contact.png";
 
 export default function ContactPages() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="flex flex-col items-center mb-16">
