@@ -1,11 +1,14 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import { footerData } from '../data/products';
 
 const Footer = () => {
+  const location = useLocation();
+  
   return (
-    <footer className="w-full max-w-7xl mx-auto border-t border-gray-200 ">
+    <footer className={`w-full max-w-7xl mx-auto ${location.pathname !== '/contact' ? 'border-t border-gray-200' : ''}`}>
       <div className="bg-white px-4 md:px-8 py-8 md:py-12 space-x-8">
 
           <div className="flex items-center justify-between p-8 mt-20 mb-8 ml-8">

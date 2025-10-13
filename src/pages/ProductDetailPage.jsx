@@ -78,7 +78,7 @@ const ProductDetailPage = () => {
             {productImages.map((img, index) => (
               <div
                 key={index}
-                className={`aspect-square bg-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity border-2 w-1/4 ${currentImageIndex === index ? 'border-[#23A6F0]' : 'border-transparent'
+                className={`aspect-square bg-gray-100 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity border-2 w-1/2 lg:w-1/4 ${currentImageIndex === index ? 'border-[#23A6F0]' : 'border-transparent'
                   }`}
                 onClick={() => handleImageChange(index)}
               >
@@ -119,7 +119,7 @@ const ProductDetailPage = () => {
                 <button
                   key={color.value}
                   onClick={() => setSelectedColor(color.value)}
-                  className={`w-8 h-8 md:mb-4 md:mt-4 rounded-full border-2 ${selectedColor === color.value
+                  className={`w-8 h-8 lg:mb-4 lg:mt-4 rounded-full border-2 ${selectedColor === color.value
                     ? 'border-gray-900'
                     : 'border-gray-300'
                     } ${color.class}`}
@@ -155,8 +155,8 @@ const ProductDetailPage = () => {
           <a href="#">Additional Information</a>
           <a href="#">Reviews <span className='text-[#23856D] '>(0)</span></a>
         </nav>
-        <div className='mt-16 border-t-2 border-[#ECECEC] flex gap-8'>
-           <img  src={productDetailsImg} alt="product Details" className='w-72 h-72 rounded-md mt-8 border-r-12 border-b-12 border-[#C4C4C433]' />
+        <div className='mt-16 border-t-2 border-[#ECECEC] flex flex-col lg:flex-row gap-8'>
+           <img  src={productDetailsImg} alt="product Details" className='w-full lg:w-72 h-72 rounded-md mt-8 border-r-12 border-b-12 border-[#C4C4C433]' />
           <div className='flex-1'>
             <h2 className='detail-heading'>the quick fox jumps over</h2>
             <p className='detail-text'>Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.
@@ -205,9 +205,9 @@ const ProductDetailPage = () => {
       </div>
       <div className="mt-16 border-[#FAFAFA] bg-[#FAFAFA] mb-12  ">
          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-8 text-center">BESTSELLER PRODUCTS</h2>
-        <div className="flex flex-wrap gap-2 md:gap-4 border-t-2 border-[#ECECEC] justify-center">
+        <div className="flex flex-wrap gap-2 lg:gap-4 border-t-2 border-[#ECECEC] justify-center">
           {products.slice(0, 8).map((relatedProduct) => (
-            <div key={relatedProduct.id} className="bg-white rounded-lg shadow-sm border border-gray-100 p-3 mt-6 space-y-3 w-1/2 md:w-1/4">
+            <div key={relatedProduct.id} className="bg-white rounded-lg shadow-sm border border-gray-100 p-3 mt-6 space-y-3 w-1/2 lg:w-1/4">
               <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-3">
                 <img
                   src={relatedProduct.image}

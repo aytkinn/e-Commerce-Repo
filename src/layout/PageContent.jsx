@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import ShopPage from '../pages/ShopPage';
 import ProductDetailPage from '../pages/ProductDetailPage';
+import ContactPages from '../pages/ContactPages';
 
 const PageContent = () => {
   return (
@@ -12,6 +13,7 @@ const PageContent = () => {
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
           <Route path="/product/:id" component={ProductDetailPage} />
+          <Route path ="/contact" component={ContactPages} />
         </Switch>
       </main>
     </div>

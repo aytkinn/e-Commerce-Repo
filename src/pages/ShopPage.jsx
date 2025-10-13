@@ -10,7 +10,7 @@ const ShopPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const { sortOptions,shopHeader } = shopPageData;
   
-  const itemsPerPage = 8;
+  const itemsPerPage = 9;
 
   const sortedProducts = [...products].sort((a, b) => {
     switch (sortBy) {
