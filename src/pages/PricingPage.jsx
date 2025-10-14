@@ -18,7 +18,7 @@ export default function PiricingPage() {
         <div className="flex flex-col items-center mb-16">
             <section className="w-full max-w-7xl mx-auto px-4">
                 <div className='flex flex-col md:flex-row justify-between items-center mt-8 gap-4'>
-                    <div className="flex items-center justify-between w-full md:w-auto">
+                    <div className="flex items-center justify-center md:justify-between w-full md:w-auto">
                         <h2 className="text-xl md:text-2xl font-bold text-gray-900 ">Bandage</h2>
 
                         <div className="md:hidden flex items-center gap-4">
