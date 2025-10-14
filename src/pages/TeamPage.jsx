@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { teamMembers } from '../data/data';
 import TeamCard from '../components/TeamCard';
-import teamSection1 from "../assets/img/teamimg/teamSection1.jpg"
+import teamSection1 from "../assets/img/teamimg/teamsection1.jpg"
 import teamSection2 from "../assets/img/teamimg/teamSection2.jpg"
 import teamSection3 from "../assets/img/teamimg/teamSection3.jpg"
 import teamSection4 from "../assets/img/teamimg/teamSection4.jpg"
