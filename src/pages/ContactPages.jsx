@@ -30,7 +30,7 @@ export default function ContactPages() {
                 <nav className='text-[#737373] hover:text-gray-900 font-medium cursor-pointer relative flex items-center gap-8 md:gap-12 '>
                     <Link to="/">Home</Link>
                     <a href="">Product</a>
-                    <a href="">Pricing</a>
+                    <Link to="/pricing">Pricing</Link>
                     <Link to="/contact">Contact</Link>
                 </nav>
             </div>
@@ -45,7 +45,7 @@ export default function ContactPages() {
                 <nav className="flex flex-col py-4 text-center mt-8 space-y-8 ">
                     <Link to="/" className="text-[#737373] hover:text-gray-900 font-semibold px-4 py-2" onClick={() => setIsMenuOpen(false)}>Home</Link>
                     <a href="" className="text-[#737373] hover:text-gray-900 font-medium px-4 py-2">Product</a>
-                    <a href="" className="text-[#737373] hover:text-gray-900 font-medium px-4 py-2">Pricing</a>
+                    <Link to="/pricing" className="text-[#737373] hover:text-gray-900 font-medium px-4 py-2">Pricing</Link>
                     <Link to="/contact" className="text-[#737373] hover:text-gray-900 font-medium px-4 py-2" onClick={() => setIsMenuOpen(false)}>Contact</Link>
                 </nav>
             </div>

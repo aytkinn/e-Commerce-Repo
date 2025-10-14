@@ -10,7 +10,7 @@ function AppContent() {
   
   return (
     <>
-      {location.pathname !== '/contact' && location.pathname !== '/about' && <Header/>}
+      {location.pathname !== '/contact' && location.pathname !== '/about' && location.pathname !== '/pricing' && <Header/>}
       <PageContent/>
       <Footer/>
     </>
