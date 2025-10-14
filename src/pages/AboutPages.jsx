@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import about from "../assets/img/about.png";
 import video from "../assets/img/videocart.jpg";
 import team1 from '../assets/img/teamimg/team1.jpg';
-import { companyLogos } from '../data/data';
 import team2 from '../assets/img/teamimg/team2.jpg';
 import team3 from '../assets/img/teamimg/team3.jpg';
+import { companyLogos } from '../data/data';
 import aboutimg from '../assets/img/aboutimg.jpg';
 export default function About() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
