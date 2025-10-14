@@ -1,5 +1,5 @@
 import React from 'react';
-import { companyLogos } from '../data/products';
+import { companyLogos } from '../data/data';
 
 const CompanyLogos = () => {
   return (

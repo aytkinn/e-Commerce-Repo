@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { homePageData, products, sliderData } from '../data/products'
+import { homePageData, products, sliderData } from '../data/data'
 import ProductCard from '../components/ProductCard'
 import ProductSlider from '../components/ProductSlider'
 import NeuralUniverse from '../components/NeuralUniverse'

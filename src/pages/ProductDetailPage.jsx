@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Star, Heart, ShoppingCart, ChevronRight, Eye, ChevronLeft } from 'lucide-react';
-import { products, productDetailData } from '../data/products';
+import { products, productDetailData } from '../data/data';
 import CompanyLogos from '../layout/CompanyLogos';
 import productDetailsImg from '../assets/img/productdeatils1.jpg';
 

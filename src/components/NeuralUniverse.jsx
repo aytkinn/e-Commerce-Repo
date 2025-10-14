@@ -37,10 +37,10 @@ const NeuralUniverse = () => {
               We know how large objects will act, but things on a small scale.
             </p>
             <div className="hidden md:flex items-center space-x-4">
-              <button className="bg-[#2DC071] text-white h-10 w-32 rounded-sm font-semibold hover:bg-green-700 transition-colors">
+              <button className="bg-[#2DC071] text-white h-10 w-32 rounded-sm font-semibold hover:bg-white hover:text-[#2DC071] hover:border-2 transition-colors">
                 BUY NOW
               </button>
-              <button className="border-[#2DC071] bg-white text-[#2DC071] border-2 h-10 w-32 rounded-sm font-semibold hover:bg-gray-50 transition-colors">
+              <button className="border-[#2DC071] bg-white text-[#2DC071] border-2 h-10 w-32 rounded-sm font-semibold hover:bg-[#2DC071] hover:text-white transition-colors">
                 READ MORE
               </button>
             </div>

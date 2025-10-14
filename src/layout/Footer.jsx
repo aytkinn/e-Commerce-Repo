@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 import { Button, Form, InputGroup } from 'react-bootstrap';
-import { footerData } from '../data/products';
+import { footerData } from '../data/data';
 
 const Footer = () => {
   const location = useLocation();

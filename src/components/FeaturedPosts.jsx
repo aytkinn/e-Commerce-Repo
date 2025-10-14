@@ -1,6 +1,6 @@
 import React from 'react';
 import { Clock, MessageCircle, ChevronRight } from 'lucide-react';
-import { featuredPostsData } from '../data/products';
+import { featuredPostsData } from '../data/data';
 
 const FeaturedPosts = () => {
 

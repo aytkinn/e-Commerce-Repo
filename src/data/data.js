@@ -454,3 +454,60 @@ export const pricingFAQs = [
     answer: "Met minim Mollie non desert Alamo est sit cliquey dolor do met sent. RELIT official consequent door ENIM RELIT Mollie. Excitation venial consequent sent nostrum met."
   }
 ];
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team1.jpg"
+  },
+  {
+    id: 2,
+    name: "Username",
+    profession: "Profession", 
+    image: "/src/assets/img/teamimg/team2.jpg"
+  },
+  {
+    id: 3,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team3.jpg"
+  },
+  {
+    id: 4,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team4.jpg"
+  },
+  {
+    id: 5,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team5.jpg"
+  },
+  {
+    id: 6,
+    name: "Username",
+    profession: "Profession", 
+    image: "/src/assets/img/teamimg/team6.jpg"
+  },
+  {
+    id: 7,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team7.jpg"
+  },
+  {
+    id: 8,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team8.jpg"
+  },
+  {
+    id: 9,
+    name: "Username",
+    profession: "Profession",
+    image: "/src/assets/img/teamimg/team9.jpg"
+  }
+];

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ListChecks, ChevronRight, LayoutGrid } from 'lucide-react';
-import { products, shopPageData } from '../data/products';
+import { products, shopPageData } from '../data/data';
 import ProductCard from '../components/ProductCard';
 import CompanyLogos from '../layout/CompanyLogos';
 

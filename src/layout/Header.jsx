@@ -1,7 +1,7 @@
 import { Heart, Mail, Menu, Phone, Search, ShoppingCart, User, X, ChevronDown, Instagram, Youtube, Facebook, Twitter } from 'lucide-react'
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { menuItems, shopDropdownData } from '../data/products';
+import { menuItems, shopDropdownData } from '../data/data';
 
 export default function Header() {
     const [isOpen,setIsOpen]=useState(false);

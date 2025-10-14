@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { productSliderData } from '../data/products';
+import { productSliderData } from '../data/data';
 
 const ProductSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

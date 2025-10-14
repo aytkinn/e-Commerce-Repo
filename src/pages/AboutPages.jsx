@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import about from "../assets/img/about.png";
 import video from "../assets/img/videocart.jpg";
-import team1 from '../assets/img/team1.jpg';
-import { companyLogos } from '../data/products';
-import team2 from '../assets/img/team2.jpg';
-import team3 from '../assets/img/team3.jpg';
+import team1 from '../assets/img/teamimg/team1.jpg';
+import { companyLogos } from '../data/data';
+import team2 from '../assets/img/teamimg/team2.jpg';
+import team3 from '../assets/img/teamimg/team3.jpg';
 import aboutimg from '../assets/img/aboutimg.jpg';
 export default function About() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -132,7 +132,7 @@ export default function About() {
                         <p className=' text-xs md:text-base font-semibold text-[#737373]'>the two major realms of Classical physics: Newtonian mechanics </p>
                 </div>
                 <div className='flex flex-col sm:flex-row justify-between mt-20 gap-4'>
-                    <div className='text-center space-y-4'>
+                    <Link to="/team" className='text-center space-y-4 cursor-pointer hover:opacity-80 transition-opacity'>
                     <img src={team1} alt="" className='w-48 h-36 mx-auto'/>
                     <h2 className='mt-8 font-bold text-sm text-[#252B42]'>Username</h2>
                     <p className='text-xs font-semibold text-[#737373]'>Profession</p>
@@ -143,8 +143,8 @@ export default function About() {
                         <Instagram className='text-[#E51F5A] h-6 w-6 lg:h-[24px] lg:w-[24px] md:text-[#23A6F0]'/>
                          <Twitter className='fill-[#21A6DF] md:fill-[#23A6F0] h-6 w-6 lg:h-[24px] lg:w-[24px]' strokeWidth={0.1}/>
                     </div>
-                </div>
-                 <div className='text-center space-y-4'>
+                </Link>
+                 <Link to="/team" className='text-center space-y-4 cursor-pointer hover:opacity-80 transition-opacity'>
                     <img src={team2} alt="" className='w-48 h-36 mx-auto'/>
                    <h2 className='mt-8 font-bold text-sm text-[#252B42]'>Username</h2>
                     <p className='text-xs font-semibold text-[#737373]'>Profession</p>
@@ -155,8 +155,8 @@ export default function About() {
                         <Instagram className='text-[#E51F5A] h-6 w-6 lg:h-[24px] lg:w-[24px] md:text-[#23A6F0]'/>
                          <Twitter className='fill-[#21A6DF] md:fill-[#23A6F0] h-6 w-6 lg:h-[24px] lg:w-[24px]' strokeWidth={0.1}/>
                     </div>
-                </div>
-                 <div className='text-center space-y-4'>
+                </Link>
+                 <Link to="/team" className='text-center space-y-4 cursor-pointer hover:opacity-80 transition-opacity'>
                     <img src={team3} alt="" className='w-48 h-36 mx-auto'/>
                     <h2 className='mt-8 font-bold text-sm text-[#252B42]'>Username</h2>
                     <p className='text-xs font-semibold text-[#737373]'>Profession</p>
@@ -167,7 +167,7 @@ export default function About() {
                         <Instagram className='text-[#E51F5A] h-6 w-6 lg:h-[24px] lg:w-[24px] md:text-[#23A6F0]'/>
                          <Twitter className='fill-[#21A6DF] md:fill-[#23A6F0] h-6 w-6 lg:h-[24px] lg:w-[24px]' strokeWidth={0.1}/>
                     </div>
-                </div>
+                </Link>
                 </div>
             </div>       
         

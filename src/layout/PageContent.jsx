@@ -6,6 +6,7 @@ import ProductDetailPage from '../pages/ProductDetailPage';
 import ContactPages from '../pages/ContactPages';
 import AboutPages from '../pages/AboutPages';
 import PricingPage from '../pages/PricingPage';
+import TeamPage from '../pages/TeamPage';
 
 const PageContent = () => {
   return (
@@ -18,6 +19,7 @@ const PageContent = () => {
           <Route path ="/contact" component={ContactPages} />
           <Route path ="/about" component={AboutPages} />
           <Route path ="/pricing" component ={PricingPage}/>
+          <Route path="/team" component={TeamPage}/>
         </Switch>
       </main>
     </div>
