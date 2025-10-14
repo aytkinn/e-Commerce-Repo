@@ -21,6 +21,15 @@ import piedpiper from "../assets/img/companylogo/PiedPiperHat.png";
 import reddit from "../assets/img/companylogo/reddit.png";
 import stripe from "../assets/img/companylogo/stripe.png";
 import slider from "../assets/img/products/product-slider1.png"
+import team1 from "../assets/img/teamimg/team1.jpg"
+import team2 from "../assets/img/teamimg/team2.jpg"
+import team3 from "../assets/img/teamimg/team3.jpg"
+import team4 from "../assets/img/teamimg/team4.jpg"
+import team5 from "../assets/img/teamimg/team5.jpg"
+import team6 from "../assets/img/teamimg/team6.jpg"
+import team7 from "../assets/img/teamimg/team7.jpg"
+import team8 from "../assets/img/teamimg/team8.jpg"
+import team9 from "../assets/img/teamimg/team9.jpg"
 
 
 export const products = [
@@ -460,54 +469,54 @@ export const teamMembers = [
     id: 1,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team1.jpg"
+    image: team1
   },
   {
     id: 2,
     name: "Username",
     profession: "Profession", 
-    image: "/src/assets/img/teamimg/team2.jpg"
+    image: team2
   },
   {
     id: 3,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team3.jpg"
+    image: team3
   },
   {
     id: 4,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team4.jpg"
+    image: team4
   },
   {
     id: 5,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team5.jpg"
+    image: team5
   },
   {
     id: 6,
     name: "Username",
     profession: "Profession", 
-    image: "/src/assets/img/teamimg/team6.jpg"
+    image: team6
   },
   {
     id: 7,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team7.jpg"
+    image: team7
   },
   {
     id: 8,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team8.jpg"
+    image: team8
   },
   {
     id: 9,
     name: "Username",
     profession: "Profession",
-    image: "/src/assets/img/teamimg/team9.jpg"
+    image: team9
   }
 ];
