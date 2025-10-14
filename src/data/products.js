@@ -319,11 +319,6 @@ export const footerData = {
       ]
     }
   ],
-  social: [
-    { name: "Facebook", icon: "Facebook", href: "#" },
-    { name: "Instagram", icon: "Instagram", href: "#" },
-    { name: "Twitter", icon: "Twitter", href: "#" }
-  ]
 };
 
 export const productSliderData = [

@@ -11,20 +11,20 @@ const Footer = () => {
     <footer className={`w-full max-w-7xl mx-auto ${location.pathname !== '/contact' ? 'border-t border-gray-200' : ''}`}>
       <div className="bg-white px-4 md:px-8 py-8 md:py-12 space-x-8">
 
-          <div className="flex items-center justify-between p-8 mt-20 mb-8 ml-8">
+          <div className="flex flex-col md:flex-row items-center justify-between p-8 mt-20 mb-8 ml-8 gap-4">
             <div className="text-2xl md:text-3xl font-bold text-[#252B42]">
               {footerData.company.name}
             </div>
             <div className="flex gap-4">
-              {footerData.social.map((social, index) => {
-                const IconComponent = social.icon === 'Facebook' ? Facebook : 
-                                    social.icon === 'Instagram' ? Instagram : Twitter;
-                return (
-                  <a key={index} href={social.href} className="text-[#23A6F0] hover:text-blue-800 transition-colors">
-                    <IconComponent className="h-6 w-6" />
-                  </a>
-                );
-              })}
+              <a href="https://facebook.com" className='bg-[#23A6F0] md:rounded-full p-1 lg:p-2 flex items-center justify-center h-6 w-6 lg:h-6 lg:w-6'>
+                <Facebook className='h-6 w-6 lg:h-[24px] lg:w-[24px] text-white fill-white transform translate-y-0.5 translate-x-0 ' strokeWidth={0.1} />
+              </a>
+              <a href="https://instagram.com" >
+                <Instagram className='h-6 w-6 lg:h-[24px] lg:w-[24px] text-[#23A6F0]' />
+              </a>
+              <a href="https://twitter.com" >
+                <Twitter className='fill-[#23A6F0] h-6 w-6 lg:h-[24px] lg:w-[24px]' strokeWidth={0.1} />
+              </a>
             </div>
           </div>
 
