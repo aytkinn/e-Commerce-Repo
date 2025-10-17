@@ -7,6 +7,8 @@ import ContactPages from '../pages/ContactPages';
 import AboutPages from '../pages/AboutPages';
 import PricingPage from '../pages/PricingPage';
 import TeamPage from '../pages/TeamPage';
+import SignupPage from '../pages/SignupPage';
+import LoginPage from '../pages/LoginPage';
 
 const PageContent = () => {
   return (
@@ -20,6 +22,8 @@ const PageContent = () => {
           <Route path ="/about" component={AboutPages} />
           <Route path ="/pricing" component ={PricingPage}/>
           <Route path="/team" component={TeamPage}/>
+          <Route path="/signup" component={SignupPage}/>
+          <Route path="/login" component={LoginPage}/>
         </Switch>
       </main>
     </div>

@@ -1,5 +1,5 @@
-import { Heart, Mail, Menu, Phone, Search, ShoppingCart, User, X, ChevronDown, Instagram, Youtube, Facebook, Twitter } from 'lucide-react'
-import React, { useState } from 'react'
+import { Heart, Mail, Menu, Phone, Search, ShoppingCart, User, X, ChevronDown, Instagram, Youtube, Facebook, Twitter, LogOut } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { menuItems, shopDropdownData } from '../data/data';
 
@@ -7,6 +7,7 @@ export default function Header() {
     const [isOpen,setIsOpen]=useState(false);
     const [showShopDropdown, setShowShopDropdown] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [user, setUser] = useState(null);
     const location = useLocation();    
     const toggleMenu=()=>{
         setIsOpen(!isOpen);
@@ -16,6 +17,59 @@ export default function Header() {
         setShowShopDropdown(false);
         console.log(`Seçilen kategori: ${category} (${gender})`);
     }
+
+    // Kullanıcı bilgilerini localStorage'dan yükle
+    useEffect(() => {
+        const checkUser = () => {
+            const userData = localStorage.getItem('user') || sessionStorage.getItem('user');
+            if (userData && userData !== 'undefined' && userData !== 'null') {
+                try {
+                    setUser(JSON.parse(userData));
+                } catch (error) {
+                    console.error('Kullanıcı verisi parse edilemedi:', error);
+                    // Bozuk veriyi temizle
+                    localStorage.removeItem('user');
+                    sessionStorage.removeItem('user');
+                    setUser(null);
+                }
+            } else {
+                setUser(null);
+            }
+        };
+        
+        cleanupStorage(); // Bozuk verileri temizle
+        checkUser();
+        
+        // Storage değişikliklerini dinle
+        window.addEventListener('storage', checkUser);
+        
+        return () => {
+            window.removeEventListener('storage', checkUser);
+        };
+    }, []);
+
+    // Logout fonksiyonu
+    const handleLogout = () => {
+        localStorage.removeItem('user');
+        localStorage.removeItem('token');
+        sessionStorage.removeItem('user');
+        sessionStorage.removeItem('token');
+        setUser(null);
+        window.location.href = '/';
+    };
+
+    // Bozuk localStorage verilerini temizle
+    const cleanupStorage = () => {
+        const userData = localStorage.getItem('user');
+        const tokenData = localStorage.getItem('token');
+        
+        if (userData === 'undefined' || userData === 'null') {
+            localStorage.removeItem('user');
+        }
+        if (tokenData === 'undefined' || tokenData === 'null') {
+            localStorage.removeItem('token');
+        }
+    };
   return (
    <div className='w-full max-w-7xl mx-auto'>
     <header className="bg-white shadow-md top-0 z-50">
@@ -124,9 +178,24 @@ export default function Header() {
         <div className="icon-container md:mr-20">
           <div className="hidden md:flex items-center gap-4">
             <User className="text-blue-400"/>
-            <span className='font-bold text-blue-400'>
-              Login / Register
-            </span>
+            {user ? (
+              <div className="flex items-center gap-2">
+                <span className='font-bold text-blue-400'>
+                  Welcome {user.name || user.email}
+                </span>
+                <button 
+                  onClick={handleLogout}
+                  className="text-red-500 hover:text-red-700 transition-colors"
+                  title="Logout"
+                >
+                  <LogOut className="h-4 w-4" />
+                </button>
+              </div>
+            ) : (
+              <Link to="/signup" className='font-bold text-blue-400 hover:text-blue-600'>
+                Login / Register
+              </Link>
+            )}
             <Search className="text-blue-400" />
             <div className="relative">
               <ShoppingCart className="text-blue-400 " />
@@ -176,7 +245,22 @@ export default function Header() {
           {location.pathname !== '/' && (
             <div className="flex items-center justify-center gap-2 py-6">
               <User className="h-6 w-6 text-[#23A6F0]" />
-              <span className="text-[#23A6F0] font-medium">Login / Register</span>
+              {user ? (
+                <div className="flex items-center gap-2">
+                  <span className="text-[#23A6F0] font-medium">
+                    Welcome {user.name || user.email}
+                  </span>
+                  <button 
+                    onClick={handleLogout}
+                    className="text-red-500 hover:text-red-700 transition-colors"
+                    title="Logout"
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </button>
+                </div>
+              ) : (
+                <span className="text-[#23A6F0] font-medium">Login / Register</span>
+              )}
             </div>
           )}
           

@@ -103,7 +103,7 @@ export default function PiricingPage() {
                             <li className='flex items-center gap-3 justify-center'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
                             <li className='flex items-center gap-3 justify-center'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
                             <li className='flex items-center gap-3 justify-center'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
-                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD]' /> 1GB  Cloud storage</li>
+                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD] -ml-12' /> 1GB  Cloud storage</li>
                             <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD]' /> Email and community support</li>
                         </ul>
                         <button className='w-60 h-12 rounded-md bg-[#252B42] text-white mt-10'>Try for free</button>
@@ -120,8 +120,8 @@ export default function PiricingPage() {
                             <li className='flex items-center gap-3 justify-center text-white'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
                             <li className='flex items-center gap-3 justify-center text-white'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
                             <li className='flex items-center gap-3 justify-center text-white'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
-                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD]' /> 1GB  Cloud storage</li>
-                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD]' /> Email and community support</li>
+                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD] -ml-12' /> 1GB  Cloud storage</li>
+                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD] ml-5' /> Email and community support</li>
                         </ul>
                         <button className='mt-10 w-60 h-12 rounded-md bg-[#23A6F0] text-white mb-4'>Try for free</button>
                     </div>
@@ -137,7 +137,7 @@ export default function PiricingPage() {
                             <li className='flex items-center gap-3 justify-center'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
                             <li className='flex items-center gap-3 justify-center'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
                             <li className='flex items-center gap-3 justify-center'><CircleCheck className='h-12 w-12 text-white fill-[#2DC071]' /> Unlimited product updates</li>
-                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD]' /> 1GB  Cloud storage</li>
+                            <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD] -ml-12' /> 1GB  Cloud storage</li>
                             <li className='flex items-center gap-3 justify-center text-[#BDBDBD]'><CircleCheck className='h-12 w-12 text-white fill-[#BDBDBD]' /> Email and community support</li>
                         </ul>
                         <button className='mt-10 w-60 h-12 rounded-md bg-[#23A6F0] text-white'>Try for free</button>
